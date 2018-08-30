@@ -73,3 +73,6 @@ pom.xml.tag
 # Maven
 log/
 target/
+
+#SV
+.svn/

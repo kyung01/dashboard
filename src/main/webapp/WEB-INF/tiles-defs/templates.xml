@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="ISO-8859-1" ?>
 <!DOCTYPE tiles-definitions PUBLIC
-       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
-       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
 
 <tiles-definitions>
 
 	<!-- Nested definition http://tiles.apache.org/framework/tutorial/advanced/nesting-extending.html -->
 	<definition name="mainTemplate.body" template="/WEB-INF/templates/dashboard/body.jsp">
 		<put-attribute name="navigator"		value="/WEB-INF/templates/dashboard/navigator.jsp" />
+		<put-attribute name="body-content"		value="" />
 	</definition>
 	
 	<!-- Default Main Template -->
@@ -16,9 +17,13 @@
 		<put-attribute name="heading" value="Home" />
 		<put-attribute name="onLoad" value="" />
 		<put-attribute name="header"	value="/WEB-INF/templates/dashboard/header.jsp" />
-		<put-attribute name="body"		value="mainTemplate.body" />
+		<put-attribute name="body">
+			<definition template="/WEB-INF/templates/dashboard/body.jsp">
+				<put-attribute name="navigator" value="/WEB-INF/templates/dashboard/navigator.jsp" />
+				<put-attribute name="body-content" value="" />
+			</definition>
+		</put-attribute>
 		<put-attribute name="footer"	value="/WEB-INF/templates/dashboard/footer.jsp" />	
-		<put-attribute name="body-content"		value="" />
 	</definition>
 
 	<definition name="dashboard" extends="mainTemplate">

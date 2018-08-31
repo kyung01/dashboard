@@ -28,7 +28,7 @@
 	#body_content{
 		width: 70%;
 		height: 100%;
-		background-color: rgb(130,150,180);
+		background-color: rgb(130,50,50);
 		display: inline-grid;
 		vertical-align: top;
 	}

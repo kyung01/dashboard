@@ -5,7 +5,7 @@
 
 <div id = 'body_main'>
 	<div id = 'navigator' class="index_div"><tiles:insertAttribute name="navigator" /></div><!--commenting out the white space between divs
-	--><div id ='body_content'>content </div>
+	--><div id = 'body_content' class="index_div"><tiles:insertAttribute name="body_content" />
 </div>
 <p>Apple</p>
 <style type="text/css">

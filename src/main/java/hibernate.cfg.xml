@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+    "-//Hibernate/Hibernate Configuration DTD//EN"
+    "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+     
+<hibernate-configuration>
+    <session-factory>
+     <mapping class="com.ctl.smartsignage.domain.User"/>
+     <mapping class="com.ctl.smartsignage.domain.Beacon"/>
+     <mapping class="com.ctl.smartsignage.domain.BeaconLocation"/>
+     <mapping class="com.ctl.smartsignage.domain.Company"/>
+     <mapping class="com.ctl.smartsignage.domain.Countries"/>
+     <mapping class="com.ctl.smartsignage.domain.MessageGroup"/>
+     <mapping class="com.ctl.smartsignage.domain.Messages"/>
+     <mapping class="com.ctl.smartsignage.domain.Phone"/>
+     
+            </session-factory>
+</hibernate-configuration>

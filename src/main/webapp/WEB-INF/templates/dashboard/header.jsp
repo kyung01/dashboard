@@ -4,7 +4,7 @@
 <div id ='header_main'>
 	
 	<div id = 'header_left'>
-		<img src="resources/images/logo.png" alt="Company Logo">
+		<img src="/smart-signage/resources/images/logo.png" alt="Company Logo">
 	</div><!--commenting out the white space between divs
 	--><div id = 'header_right'>
 		<h1 id =	'right'>HEADING</h1>

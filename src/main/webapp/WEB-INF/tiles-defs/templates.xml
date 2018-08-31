@@ -6,9 +6,10 @@
 <tiles-definitions>
 
 	<!-- Nested definition http://tiles.apache.org/framework/tutorial/advanced/nesting-extending.html -->
+	<!-- Below defintion is not used but can be used. Currently left as it is for future reference -->
 	<definition name="mainTemplate.body" template="/WEB-INF/templates/dashboard/body.jsp">
 		<put-attribute name="navigator"		value="/WEB-INF/templates/dashboard/navigator.jsp" />
-		<put-attribute name="body-content"		value="" />
+		<put-attribute name="body_content"		value="" />
 	</definition>
 	
 	<!-- Default Main Template -->
@@ -20,16 +21,59 @@
 		<put-attribute name="body">
 			<definition template="/WEB-INF/templates/dashboard/body.jsp">
 				<put-attribute name="navigator" value="/WEB-INF/templates/dashboard/navigator.jsp" />
-				<put-attribute name="body-content" value="" />
+				<put-attribute name="body_content" value="" />
 			</definition>
 		</put-attribute>
 		<put-attribute name="footer"	value="/WEB-INF/templates/dashboard/footer.jsp" />	
 	</definition>
 
+	<!-- TODO Change the name from dashboard to something else because "dashboard" is confusing -->
+	<!-- TODO will need to change the value of body.body_content in order to change the displayed result -->
+	<!-- TODO figure out how to use "navigator"s javascript code from here to display menu selected effect -->
 	<definition name="dashboard" extends="mainTemplate">
 		<put-attribute name="title" value="Dashboard" />
 		<put-attribute name="onLoad" value="" />
-		<put-attribute name="body-content" value="" />
+		<put-attribute name="body_content" value="" />
+	</definition>
+	
+	<definition name="dashboard_beacons" extends="mainTemplate">
+		<put-attribute name="body">
+			<definition template="/WEB-INF/templates/dashboard/body.jsp">
+				<put-attribute name="navigator" value="/WEB-INF/templates/dashboard/navigator.jsp" />
+				<put-attribute name="body_content" value="/WEB-INF/templates/dashboard/bodies/beacons.jsp" />
+			</definition>
+		</put-attribute>
+	</definition>
+	
+	<definition name="dashboard_messages" extends="mainTemplate">
+		<put-attribute name="title" value="Dashboard" />
+		<put-attribute name="onLoad" value="" />
+		<put-attribute name="body_content" value="" />
+	</definition>
+	
+	<definition name="dashboard_locations" extends="mainTemplate">
+		<put-attribute name="title" value="Dashboard" />
+		<put-attribute name="onLoad" value="" />
+		<put-attribute name="body_content" value="" />
+	</definition>
+	
+	<definition name="dashboard_analytics" extends="mainTemplate">
+		<put-attribute name="title" value="Dashboard" />
+		<put-attribute name="onLoad" value="" />
+		<put-attribute name="body_content" value="" />
+	</definition>
+	
+	<definition name="dashboard_company" extends="mainTemplate">
+		<put-attribute name="title" value="Dashboard" />
+		<put-attribute name="onLoad" value="" />
+		<put-attribute name="body_content" value="" />
+	</definition>
+	
+	
+	<definition name="dashboard_users" extends="mainTemplate">
+		<put-attribute name="title" value="Dashboard" />
+		<put-attribute name="onLoad" value="" />
+		<put-attribute name="body_content" value="" />
 	</definition>
 
 	

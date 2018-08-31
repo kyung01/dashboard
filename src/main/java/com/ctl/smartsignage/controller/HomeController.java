@@ -103,6 +103,96 @@ public class HomeController {
     }
     
     
+    @Secured({"ROLE_ADMIN"})
+    @RequestMapping(value = "/dashboard/beacons")
+    public String dashboard_beacons(ModelMap map, HttpSession session, HttpServletRequest request) {
+    	Long lngUserId = (session.getAttribute("userId")!=null) ? (Long)session.getAttribute("userId") : 0;
+    	//Integer lngUserId = (Integer) session.getAttribute("userId");
+    	Resources.printLine("/dashboard/beacons >> lngUserId >> "+lngUserId);
+    	if(lngUserId != null) {
+    		System.out.println("lngUserId ->>> "+lngUserId);
+        	
+            return "dashboard_beacons";
+    	}
+    	System.out.println("lngUserId ->>> "+lngUserId);
+    	
+        return "home";
+    }
+    @Secured({"ROLE_ADMIN"})
+    @RequestMapping(value = "/dashboard/messages")
+    public String dashboard_messages(ModelMap map, HttpSession session, HttpServletRequest request) {
+    	Long lngUserId = (session.getAttribute("userId")!=null) ? (Long)session.getAttribute("userId") : 0;
+    	//Integer lngUserId = (Integer) session.getAttribute("userId");
+    	Resources.printLine("/beacons >> lngUserId >> "+lngUserId);
+    	if(lngUserId != null) {
+    		System.out.println("lngUserId ->>> "+lngUserId);
+        	
+            return "dashboard_messages";
+    	}
+    	System.out.println("lngUserId ->>> "+lngUserId);
+    	
+        return "home";
+    }
+    @Secured({"ROLE_ADMIN"})
+    @RequestMapping(value = "/dashboard/locations")
+    public String dashboard_locations(ModelMap map, HttpSession session, HttpServletRequest request) {
+    	Long lngUserId = (session.getAttribute("userId")!=null) ? (Long)session.getAttribute("userId") : 0;
+    	//Integer lngUserId = (Integer) session.getAttribute("userId");
+    	Resources.printLine("/beacons >> lngUserId >> "+lngUserId);
+    	if(lngUserId != null) {
+    		System.out.println("lngUserId ->>> "+lngUserId);
+        	
+            return "dashboard_locations";
+    	}
+    	System.out.println("lngUserId ->>> "+lngUserId);
+    	
+        return "home";
+    }
+    @Secured({"ROLE_ADMIN"})
+    @RequestMapping(value = "/dashboard/analytics")
+    public String dashboard_analytics(ModelMap map, HttpSession session, HttpServletRequest request) {
+    	Long lngUserId = (session.getAttribute("userId")!=null) ? (Long)session.getAttribute("userId") : 0;
+    	//Integer lngUserId = (Integer) session.getAttribute("userId");
+    	Resources.printLine("/beacons >> lngUserId >> "+lngUserId);
+    	if(lngUserId != null) {
+    		System.out.println("lngUserId ->>> "+lngUserId);
+        	
+            return "dashboard_analytics";
+    	}
+    	System.out.println("lngUserId ->>> "+lngUserId);
+    	
+        return "home";
+    }
+    @Secured({"ROLE_ADMIN"})
+    @RequestMapping(value = "/dashboard/company")
+    public String dashboard_company(ModelMap map, HttpSession session, HttpServletRequest request) {
+    	Long lngUserId = (session.getAttribute("userId")!=null) ? (Long)session.getAttribute("userId") : 0;
+    	//Integer lngUserId = (Integer) session.getAttribute("userId");
+    	Resources.printLine("/beacons >> lngUserId >> "+lngUserId);
+    	if(lngUserId != null) {
+    		System.out.println("lngUserId ->>> "+lngUserId);
+        	
+            return "dashboard_company";
+    	}
+    	System.out.println("lngUserId ->>> "+lngUserId);
+    	
+        return "home";
+    }
+    @Secured({"ROLE_ADMIN"})
+    @RequestMapping(value = "/dashboard/users")
+    public String dashboard_users(ModelMap map, HttpSession session, HttpServletRequest request) {
+    	Long lngUserId = (session.getAttribute("userId")!=null) ? (Long)session.getAttribute("userId") : 0;
+    	//Integer lngUserId = (Integer) session.getAttribute("userId");
+    	Resources.printLine("/beacons >> lngUserId >> "+lngUserId);
+    	if(lngUserId != null) {
+    		System.out.println("lngUserId ->>> "+lngUserId);
+        	
+            return "dashboard_users";
+    	}
+    	System.out.println("lngUserId ->>> "+lngUserId);
+    	
+        return "home";
+    }
     
     @RequestMapping(value = "/userRegister", method = RequestMethod.POST)
 	public String addClient(@ModelAttribute(value="client") Registration registration, BindingResult result, HttpServletRequest request, HttpSession session) 
